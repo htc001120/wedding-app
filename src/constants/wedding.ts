@@ -1,5 +1,5 @@
 export const WEDDING_CONFIG = {
-  date: new Date('2025-10-15T16:00:00'),
+  date: new Date('2025-10-16T14:00:00'),
   bride: {
     name: 'Tracy',
     fullName: 'Hiu Yan Lau',
@@ -17,9 +17,9 @@ export const WEDDING_CONFIG = {
       time: '2:00 PM',
     },
     reception: {
-      name: 'Lazor Garden Alivila',
-      address: 'Lazor Garden Alivila, Okinawa, Japan',
-      time: '4:30 PM',
+      name: 'Aquagrace Chapel',
+      address: 'Aquagrace Chapel, Okinawa, Japan',
+      time: '6:30 PM',
     },
   },
 };
