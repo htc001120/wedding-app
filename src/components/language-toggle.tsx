@@ -1,12 +1,18 @@
 'use client';
 
 import { useTranslate } from '@/locales';
+import { languages } from '@/locales/config-locales';
 import { motion } from 'motion/react';
 import { useCallback } from 'react';
 
 // Language Toggle Button Component
 export function LanguageToggle() {
   const { onChangeLang, currentLang } = useTranslate();
+
+  // Hide the language toggle if there's only one language
+  if (!currentLang || languages.length <= 1) {
+    return null;
+  }
 
   const isIndonesian = currentLang?.value === 'id';
 
@@ -25,12 +31,12 @@ export function LanguageToggle() {
       transition={{ duration: 0.3, delay: 0.6 }}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="relative flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-2 sm:py-2.5 rounded-lg sm:rounded-xl text-xs sm:text-sm font-medium transition-all duration-300 group overflow-hidden cursor-pointer text-gray-600 hover:text-blue-500 hover:bg-blue-50/80"
+      className='relative flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-2 sm:py-2.5 rounded-lg sm:rounded-xl text-xs sm:text-sm font-medium transition-all duration-300 group overflow-hidden cursor-pointer text-gray-600 hover:text-blue-500 hover:bg-blue-50/80'
       title={`Switch to ${isIndonesian ? 'English' : 'Bahasa Indonesia'}`}
     >
       {/* Icon with Flag Animation */}
       <motion.span
-        className="text-sm sm:text-base relative z-10"
+        className='text-sm sm:text-base relative z-10'
         animate={{
           rotate: [0, -5, 5, -5, 0],
         }}
@@ -46,7 +52,7 @@ export function LanguageToggle() {
 
       {/* Language Label */}
       <motion.span
-        className="hidden sm:inline-block whitespace-nowrap relative z-10 text-xs sm:text-sm font-medium"
+        className='hidden sm:inline-block whitespace-nowrap relative z-10 text-xs sm:text-sm font-medium'
         initial={{ opacity: 0, x: -10 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.3, delay: 0.7 }}
@@ -56,7 +62,7 @@ export function LanguageToggle() {
 
       {/* Hover Ripple Effect */}
       <motion.div
-        className="absolute inset-0 rounded-lg sm:rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+        className='absolute inset-0 rounded-lg sm:rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-300'
         style={{
           background:
             'radial-gradient(circle at center, #3b82f6 0%, transparent 70%)',
@@ -65,7 +71,7 @@ export function LanguageToggle() {
 
       {/* Active State Background */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-lg sm:rounded-xl"
+        className='absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-lg sm:rounded-xl'
         initial={{ scale: 0, opacity: 0 }}
         whileHover={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.3 }}

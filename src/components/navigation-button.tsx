@@ -65,7 +65,7 @@ export function NavigationButton({
 
       {/* Icon with Bounce Animation */}
       <motion.span
-        className="text-sm sm:text-base relative z-10"
+        className='text-sm sm:text-base relative z-10'
         animate={isActive ? NAVIGATION_ANIMATIONS.icon.active : {}}
         transition={NAVIGATION_ANIMATIONS.icon.transition}
         whileHover={NAVIGATION_ANIMATIONS.icon.hover}
@@ -75,15 +75,13 @@ export function NavigationButton({
 
       {/* Label with Slide Animation */}
       <motion.span
-        className="hidden sm:inline-block whitespace-nowrap relative z-10 text-xs sm:text-sm"
+        className='hidden sm:inline-block whitespace-nowrap relative z-10 text-xs sm:text-sm'
         initial={{ opacity: 0, x: -10 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.3, delay: 0.1 * index }}
       >
-        {
-          // @ts-expect-error - err
-          t(section.labelKey)
-        }
+        {/* @ts-expect-error - err */}
+        {t(section.labelKey)}
       </motion.span>
 
       {/* Active Indicator Dot with Pulse */}
@@ -94,12 +92,12 @@ export function NavigationButton({
             animate={{ scale: 1, opacity: 1 }}
             exit={NAVIGATION_ANIMATIONS.background.exit}
             transition={NAVIGATION_ANIMATIONS.background.transition}
-            className="absolute -bottom-0.5 sm:-bottom-1 left-1/2 -translate-x-1/2 w-0.5 sm:w-1 h-0.5 sm:h-1 bg-white rounded-full shadow-lg z-10"
+            className='absolute -bottom-0.5 sm:-bottom-1 left-1/2 -translate-x-1/2 w-0.5 sm:w-1 h-0.5 sm:h-1 bg-white rounded-full shadow-lg z-10'
           >
             <motion.div
               animate={NAVIGATION_ANIMATIONS.pulse.animate}
               transition={NAVIGATION_ANIMATIONS.pulse.transition}
-              className="w-full h-full bg-white rounded-full"
+              className='w-full h-full bg-white rounded-full'
             />
           </motion.div>
         )}
@@ -107,7 +105,7 @@ export function NavigationButton({
 
       {/* Hover Ripple Effect */}
       <motion.div
-        className="absolute inset-0 rounded-lg sm:rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+        className='absolute inset-0 rounded-lg sm:rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-300'
         style={{
           background: `radial-gradient(circle at center, ${getRippleColor(
             section.gradient
