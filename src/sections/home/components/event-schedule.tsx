@@ -14,9 +14,9 @@ export const EventSchedule = () => {
 
   const scheduleItems = [
     {
-      time: '3:30 PM',
+      time: '1:30 PM',
       event: t('schedule.guest-arrival'),
-      description: t('schedule.welcome-drinks'),
+      description: '',
     },
     {
       time: '2:00 PM',
@@ -24,29 +24,27 @@ export const EventSchedule = () => {
       description: t('schedule.vows'),
     },
     {
-      time: '4:30 PM',
+      time: '2:30 PM',
       event: t('schedule.photography'),
-      description: t('schedule.welcome-drink'),
+      description: t('schedule.photography-caption'),
     },
     {
-      time: '6:30 PM',
-      event: t('schedule.reception-begins'),
-      description: t('schedule.dinner-celebration'),
+      time: '3:00 PM',
+      event: 'Refresh & Relax',
+      description:
+        'Take a little time to rest or enjoy Okinawa before the evening festivities.',
     },
     {
-      time: '7:30 PM',
-      event: t('schedule.first-dance'),
-      description: t('schedule.special-moment'),
+      time: '6:20 PM',
+      event: 'Banquet at Aquagrace',
+      description:
+        'Join us for an evening of dining, toasts, and celebration. Please arrive 5–10 minutes early, as the banquet will begin promptly.',
     },
     {
-      time: '8:00 PM',
-      event: t('schedule.dancing-party'),
-      description: t('schedule.celebration-continues'),
-    },
-    {
-      time: '09:00 PM',
-      event: t('schedule.send-off'),
-      description: t('schedule.sparkler-farewell'),
+      time: '8:45 PM',
+      event: 'Sparkler Send-Off',
+      description:
+        'Light up the night as we send off the newlyweds in a glow of sparkle and love.',
     },
   ];
 
