@@ -17,6 +17,32 @@
     "hashtags": "#FiqriAndMio2025 #LoveWins #ForeverStartsNow",
     "contact": "Questions? Contact us at wedding@fihaa.my.id"
   },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "help": "Find answers to common questions",
+    "questions": {
+      "dress-code": {
+        "q": "What is the dress code?",
+        "a": "Semi-formal attire is requested. Please avoid wearing white as it is reserved for the bride."
+      },
+      "transportation": {
+        "q": "Is transportation provided?",
+        "a": "Shuttle service will be available between the ceremony and reception venues."
+      },
+      "guest": {
+        "q": "Can I bring guests?",
+        "a": "As much as we’d love to celebrate with everyone, space is very limited. We kindly ask for your understanding."
+      },
+      "mid-time": {
+        "q": "What should I do between the ceremony and banquet?",
+        "a": "Enjoy a leisurely afternoon—relax, explore Okinawa, or spend time with friends before the evening festivities."
+      },
+      "accommodation": {
+        "q": "Where should I stay?",
+        "a": "The ceremony venue is close to Hotel Nikko Alivila, within walking distance, as well as Hoshinoya Okinawa located nearby."
+      }
+    }
+  },
   "hero": {
     "welcome": "Welcome to Our Wedding",
     "together": "Together",
@@ -29,7 +55,8 @@
     "bride-description": "A beautiful soul with a heart full of love and dreams of a wonderful future together.",
     "groom-description": "A kind and caring partner who brings joy and laughter to every day.",
     "our-story": "Our Love Story",
-    "story-text": "Our journey began with a simple hello and has blossomed into the most beautiful love story. We're excited to share this special day with all of you.",
+    "story-text1": "Yan and Ming first met at work in Hong Kong. A few years later, fate brought them together again in a bookshop, where a simple encounter blossomed into something beautiful.",
+    "story-text2": "From Hong Kong to London, their journey has been filled with laughter, adventures, and love. After six wonderful years together, they are now ready to begin their next chapter and would be truly honored to have you witness this moment.",
     "the-groom": "The Groom",
     "the-bride": "The Bride",
     "love-quote": "You’re the one I want to share every sunrise and sunset with."
@@ -57,12 +84,12 @@
     "message": "Don't miss our special day! Add this event to your calendar and we'll send you a reminder.",
     "ceremony": "Ceremony",
     "get-directions": "Get Directions",
-    "reception": "Reception",
+    "reception": "Banquet",
     "please-note": "Please Note",
     "dress-code": "Dress Code",
-    "formal-attire": "Formal Attire",
+    "formal-attire": "Theme color: Baby Blue",
     "parking": "Parking",
-    "valet-available": "Valet Available",
+    "valet-available": "Parking is available at both venues",
     "contact": "Contact",
     "our-wedding-day": "Our Wedding Day",
     "join-us": "Join us for our special day!"
@@ -123,7 +150,7 @@
     "guests": "Number of Guests",
     "message": "Special Message (Optional)",
     "submit": "Send RSVP",
-    "thank-you": "Thank you for your RSVP!",
+    "thank-you": "Thank you for your Wishes!",
     "confirm-attendance": "Confirm Your Attendance",
     "full-name": "Full Name",
     "email-address": "Email Address",
@@ -138,7 +165,7 @@
     "dietary-placeholder": "Any allergies or dietary needs?",
     "message-couple": "Message for the Couple",
     "message-placeholder": "Share your wishes for the happy couple...",
-    "send-rsvp": "Send RSVP 💕",
+    "send-rsvp": "Send Wishes 💕",
     "thank-you-received": "Your RSVP has been received. We can't wait to celebrate with you!",
     "deadline": "RSVP Deadline",
     "deadline-date": "November 15, 2025",
@@ -162,10 +189,10 @@
     "guest-arrival": "Guest Arrival & Seating",
     "welcome-drinks": "Welcome drinks available",
     "wedding-ceremony": "Wedding Ceremony",
-    "vows": "Lazor Garden Alivila",
+    "vows": "The celebration begins as Yan and Ming exchange their vows. Guests are welcome from 1:30 PM.",
     "photography": "Photography Session",
-    "welcome-drink": "Welcome drink for guests",
-    "reception-begins": "Reception Begins",
+    "photography-caption": "Capture the joy of the day with smiles, laughter, and lasting memories.",
+    "reception-begins": "Banquet Begins",
     "dinner-celebration": "Dinner & celebration",
     "first-dance": "First Dance",
     "special-moment": "Bride & groom special moment",
