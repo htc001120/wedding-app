@@ -269,7 +269,7 @@ export const WeddingDetailsCard = ({
             </div>
           </motion.div>
 
-          {/* Reception Card */}
+          {/* Banquet Card */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
