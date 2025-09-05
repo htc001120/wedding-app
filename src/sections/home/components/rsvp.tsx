@@ -24,11 +24,32 @@ export const RSVP = () => {
     threshold: 0.2,
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the data to your backend
-    setIsSubmitted(true);
 
+    setIsSubmitted(true);
+    const response = await fetch(
+      'https://script.google.com/macros/s/AKfycbzLtCKG72kGz1jXFXmN8X6ako9azNPDGT6x0DlMIejmcpOZxBF-HtMIGjbea8Q7MitUJg/exec',
+      {
+        method: 'POST',
+        mode: 'no-cors', // This is important for Google Apps Script
+        body: new URLSearchParams({
+          name: formData.name,
+          message: formData.message,
+        }).toString(),
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+      }
+    );
+
+    if (response.ok || response.status === 0) {
+      console.log('Form submitted successfully');
+    } else {
+      console.error('Form submission failed');
+    }
+    return;
     // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
@@ -111,7 +132,7 @@ export const RSVP = () => {
           >
             <div className='bg-white rounded-3xl p-8 shadow-xl border border-rose-100'>
               <h3 className='text-xl sm:text-2xl md:text-3xl font-serif text-gray-800 mb-6 text-center'>
-                {t('rsvp.confirm-attendance')}
+                {t('rsvp.message-couple')}
               </h3>
 
               <form onSubmit={handleSubmit} className='space-y-6'>
@@ -130,12 +151,12 @@ export const RSVP = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className='w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-rose-400 focus:border-transparent outline-none transition-all duration-300'
+                    className='w-full px-4 py-3 border border-gray-200 text-gray-700 rounded-xl focus:ring-2 focus:ring-rose-400 focus:border-transparent outline-none transition-all duration-300'
                     placeholder={t('rsvp.full-name')}
                   />
                 </div>
                 {/* Email */}
-                <div>
+                {/* <div>
                   <label
                     htmlFor='email'
                     className='block text-xs sm:text-sm font-medium text-gray-700 mb-2'
@@ -152,9 +173,9 @@ export const RSVP = () => {
                     className='w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-rose-400 focus:border-transparent outline-none transition-all duration-300'
                     placeholder={t('rsvp.email-address')}
                   />
-                </div>
+                </div> */}
                 {/* Attendance */}
-                <div>
+                {/* <div>
                   <label
                     htmlFor='attendance'
                     className='block text-xs sm:text-sm font-medium text-gray-700 mb-2'
@@ -173,9 +194,9 @@ export const RSVP = () => {
                     <option value='yes'>{t('rsvp.yes-there')}</option>
                     <option value='no'>{t('rsvp.no-cant')}</option>
                   </select>
-                </div>
+                </div> */}
                 {/* Number of Guests */}
-                {formData.attendance === 'yes' && (
+                {/* {formData.attendance === 'yes' && (
                   <div>
                     <label
                       htmlFor='guests'
@@ -196,9 +217,9 @@ export const RSVP = () => {
                       <option value='4'>4 {t('rsvp.guests-count')}</option>
                     </select>
                   </div>
-                )}
+                )} */}
                 {/* Dietary Restrictions */}
-                {formData.attendance === 'yes' && (
+                {/* {formData.attendance === 'yes' && (
                   <div>
                     <label
                       htmlFor='dietaryRestrictions'
@@ -216,7 +237,7 @@ export const RSVP = () => {
                       placeholder={t('rsvp.dietary-placeholder')}
                     />
                   </div>
-                )}
+                )} */}
                 {/* Message */}
                 <div>
                   <label
@@ -231,7 +252,7 @@ export const RSVP = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
-                    className='w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-rose-400 focus:border-transparent outline-none transition-all duration-300 resize-none'
+                    className='w-full px-4 py-3 border border-gray-200 text-gray-700 rounded-xl focus:ring-2 focus:ring-rose-400 focus:border-transparent outline-none transition-all duration-300 resize-none'
                     placeholder={t('rsvp.message-placeholder')}
                   />
                 </div>
@@ -254,26 +275,6 @@ export const RSVP = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className='space-y-8'
           >
-            {/* RSVP Deadline */}
-            <div className='bg-white rounded-2xl p-6 shadow-lg border border-rose-100'>
-              <div className='flex items-center mb-4'>
-                <div className='w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center mr-4'>
-                  <span className='text-rose-600 text-xl'>⏰</span>
-                </div>
-                <div>
-                  <h4 className='font-semibold text-gray-800 text-sm sm:text-base'>
-                    {t('rsvp.deadline')}
-                  </h4>
-                  <p className='text-gray-600 text-xs sm:text-sm'>
-                    {t('rsvp.deadline-date')}
-                  </p>
-                </div>
-              </div>
-              <p className='text-gray-600 text-xs sm:text-sm'>
-                {t('rsvp.deadline-help')}
-              </p>
-            </div>
-
             {/* Contact Info */}
             <div className='bg-white rounded-2xl p-6 shadow-lg border border-rose-100'>
               <div className='flex items-center mb-4'>
@@ -291,12 +292,78 @@ export const RSVP = () => {
               </div>
               <div className='space-y-2 text-xs sm:text-sm text-gray-600'>
                 <p>📧 homing417@gmail.com</p>
-                <p>📱 (852) 9821 0867</p>
+                <p>
+                  📱 <a href='https://wa.me/85298210867'>+852 9821 0867</a>
+                </p>
+              </div>
+            </div>
+
+            {/* FAQ Section */}
+            <div className='bg-white rounded-2xl p-6 shadow-lg border border-rose-100'>
+              <div className='flex items-center mb-4'>
+                <div className='w-12 h-12 bg-violet-100 rounded-full flex items-center justify-center mr-4'>
+                  <span className='text-violet-600 text-xl'>❓</span>
+                </div>
+                <div>
+                  <h4 className='font-semibold text-gray-800 text-sm sm:text-base'>
+                    {t('faq.title')}
+                  </h4>
+                  <p className='text-gray-600 text-xs sm:text-sm'>
+                    {t('faq.help')}
+                  </p>
+                </div>
+              </div>
+              <div className='space-y-4'>
+                {/* Dress Code */}
+                <div className='space-y-1'>
+                  <p className='text-gray-800 text-xs sm:text-sm font-medium'>
+                    {t('faq.questions.dress-code.q')}
+                  </p>
+                  <p className='text-gray-600 text-xs sm:text-sm'>
+                    {t('faq.questions.dress-code.a')}
+                  </p>
+                </div>
+                {/* Transportation */}
+                <div className='space-y-1'>
+                  <p className='text-gray-800 text-xs sm:text-sm font-medium'>
+                    {t('faq.questions.transportation.q')}
+                  </p>
+                  <p className='text-gray-600 text-xs sm:text-sm'>
+                    {t('faq.questions.transportation.a')}
+                  </p>
+                </div>
+                {/* Guest */}
+                <div className='space-y-1'>
+                  <p className='text-gray-800 text-xs sm:text-sm font-medium'>
+                    {t('faq.questions.guest.q')}
+                  </p>
+                  <p className='text-gray-600 text-xs sm:text-sm'>
+                    {t('faq.questions.guest.a')}
+                  </p>
+                </div>
+                {/* Mid-time */}
+                <div className='space-y-1'>
+                  <p className='text-gray-800 text-xs sm:text-sm font-medium'>
+                    {t('faq.questions.mid-time.q')}
+                  </p>
+                  <p className='text-gray-600 text-xs sm:text-sm'>
+                    {t('faq.questions.mid-time.a')}
+                  </p>
+                </div>
+                {/* Accommodation */}
+                <div className='space-y-1'>
+                  <p className='text-gray-800 text-xs sm:text-sm font-medium'>
+                    {t('faq.questions.accommodation.q')}
+                  </p>
+                  <p className='text-gray-600 text-xs sm:text-sm'>
+                    {t('faq.questions.accommodation.a')}
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* Gift Registry */}
-            <div className='bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl p-6 shadow-lg border border-amber-100'>
+            {/* <div className='bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl p-6 shadow-lg border border-amber-100'>
               <div className='flex items-center mb-4'>
                 <div className='w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mr-4'>
                   <span className='text-amber-600 text-xl'>🎁</span>
@@ -324,7 +391,7 @@ export const RSVP = () => {
                   Trakteer
                 </span>
               </div>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </div>
