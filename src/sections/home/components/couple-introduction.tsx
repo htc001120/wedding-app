@@ -50,7 +50,7 @@ export const CoupleIntroduction = ({
 
         {/* Couple Cards */}
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16'>
-          {/* Bride Card */}
+          {/* Groom Card */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -50 }}
@@ -58,36 +58,35 @@ export const CoupleIntroduction = ({
             className='text-center lg:text-right'
           >
             <div className='relative inline-block mb-6'>
-              <div className='w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 bg-gradient-to-br from-rose-100 to-pink-200 rounded-full flex items-center justify-center text-6xl sm:text-7xl md:text-8xl lg:text-9xl shadow-2xl border-8 border-white'>
+              <div className='w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 bg-gradient-to-br from-blue-100 to-indigo-200 rounded-full flex items-center justify-center text-6xl sm:text-7xl md:text-8xl lg:text-9xl shadow-2xl border-8 border-white'>
                 <Image
-                  src={bride.photo}
-                  alt={`${bride.fullName}'s photo`}
+                  src={groom.photo}
+                  alt={`${groom.fullName}'s photo`}
                   width={256}
                   height={256}
                   className='rounded-full object-cover'
-                  loading='lazy'
                 />
               </div>
-              <div className='absolute -bottom-4 -right-4 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-rose-400 rounded-full flex items-center justify-center shadow-lg'>
-                <span className='text-white text-xl sm:text-2xl'>👸</span>
+              <div className='absolute -bottom-4 -right-4 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-blue-400 rounded-full flex items-center justify-center shadow-lg'>
+                <span className='text-white text-xl sm:text-2xl'>🤴</span>
               </div>
             </div>
 
             <h3 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-gray-800 mb-2'>
-              {bride.fullName}
+              {groom.fullName}
             </h3>
-            <p className='text-base sm:text-lg md:text-xl text-rose-600 mb-4 font-medium'>
-              {t('couple.the-bride')}
+            <p className='text-base sm:text-lg md:text-xl text-blue-600 mb-4 font-medium'>
+              {t('couple.the-groom')}
             </p>
             <p className='text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed max-w-md mx-auto lg:mx-0 lg:ml-auto'>
-              {t('couple.bride-description')}
+              {t('couple.groom-description')}
             </p>
 
             {/* Decorative Elements */}
             <div className='mt-6 flex justify-center lg:justify-end space-x-2'>
-              <div className='w-2 h-2 bg-rose-300 rounded-full'></div>
-              <div className='w-2 h-2 bg-rose-400 rounded-full'></div>
-              <div className='w-2 h-2 bg-rose-500 rounded-full'></div>
+              <div className='w-2 h-2 bg-blue-300 rounded-full'></div>
+              <div className='w-2 h-2 bg-blue-400 rounded-full'></div>
+              <div className='w-2 h-2 bg-blue-500 rounded-full'></div>
             </div>
           </motion.div>
 
@@ -119,7 +118,7 @@ export const CoupleIntroduction = ({
             </motion.div>
           </div>
 
-          {/* Groom Card */}
+          {/* Bride Card */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 50 }}
@@ -127,35 +126,36 @@ export const CoupleIntroduction = ({
             className='text-center lg:text-left'
           >
             <div className='relative inline-block mb-6'>
-              <div className='w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 bg-gradient-to-br from-blue-100 to-indigo-200 rounded-full flex items-center justify-center text-6xl sm:text-7xl md:text-8xl lg:text-9xl shadow-2xl border-8 border-white'>
+              <div className='w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 bg-gradient-to-br from-rose-100 to-pink-200 rounded-full flex items-center justify-center text-6xl sm:text-7xl md:text-8xl lg:text-9xl shadow-2xl border-8 border-white'>
                 <Image
-                  src={groom.photo}
-                  alt={`${groom.fullName}'s photo`}
+                  src={bride.photo}
+                  alt={`${bride.fullName}'s photo`}
                   width={256}
                   height={256}
                   className='rounded-full object-cover'
+                  loading='lazy'
                 />
               </div>
-              <div className='absolute -bottom-4 -left-4 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-blue-400 rounded-full flex items-center justify-center shadow-lg'>
-                <span className='text-white text-xl sm:text-2xl'>🤴</span>
+              <div className='absolute -bottom-4 -left-4 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-rose-400 rounded-full flex items-center justify-center shadow-lg'>
+                <span className='text-white text-xl sm:text-2xl'>👸</span>
               </div>
             </div>
 
             <h3 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-gray-800 mb-2'>
-              {groom.fullName}
+              {bride.fullName}
             </h3>
-            <p className='text-base sm:text-lg md:text-xl text-blue-600 mb-4 font-medium'>
-              {t('couple.the-groom')}
+            <p className='text-base sm:text-lg md:text-xl text-rose-600 mb-4 font-medium'>
+              {t('couple.the-bride')}
             </p>
             <p className='text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed max-w-md mx-auto lg:mx-0'>
-              {t('couple.groom-description')}
+              {t('couple.bride-description')}
             </p>
 
             {/* Decorative Elements */}
             <div className='mt-6 flex justify-center lg:justify-start space-x-2'>
-              <div className='w-2 h-2 bg-blue-300 rounded-full'></div>
-              <div className='w-2 h-2 bg-blue-400 rounded-full'></div>
-              <div className='w-2 h-2 bg-blue-500 rounded-full'></div>
+              <div className='w-2 h-2 bg-rose-300 rounded-full'></div>
+              <div className='w-2 h-2 bg-rose-400 rounded-full'></div>
+              <div className='w-2 h-2 bg-rose-500 rounded-full'></div>
             </div>
           </motion.div>
         </div>

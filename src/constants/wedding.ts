@@ -3,12 +3,12 @@ export const WEDDING_CONFIG = {
   bride: {
     name: 'Tracy',
     fullName: 'Hiu Yan Lau',
-    photo: '/assets/images/bride-circle.png',
+    photo: '/assets/images/DSC_3042_f3.jpg',
   },
   groom: {
     name: 'Ming',
     fullName: 'Ho Ming Chan',
-    photo: '/assets/images/groom-circle.png',
+    photo: '/assets/images/DSC_3042_m2.jpg',
   },
   venue: {
     ceremony: {
