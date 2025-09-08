@@ -119,6 +119,23 @@ export const HeroSection = ({
               </div>
             </motion.div>
 
+            {/* Church Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 0.9 }}
+              transition={{ duration: 1, delay: 0.8 }}
+              className='relative w-full max-w-[600px] mx-auto mb-8'
+            >
+              <div className='relative'>
+                <img
+                  src='/assets/images/church2.png'
+                  alt='Church'
+                  className='w-full h-auto object-contain filter drop-shadow-lg'
+                />
+                <div className='absolute inset-0 bg-gradient-to-t from-white/10 to-transparent mix-blend-overlay'></div>
+              </div>
+            </motion.div>
+
             {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
