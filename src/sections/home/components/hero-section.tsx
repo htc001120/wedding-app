@@ -37,9 +37,29 @@ export const HeroSection = ({
               transition={{ duration: 1, delay: 0.2 }}
               className='mb-6 sm:mb-8'
             >
-              <div className='text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 mb-4 font-medium'>
+              <div className='text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 mb-2 font-medium'>
                 {t('hero.welcome')}
               </div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 20 }}
+                transition={{ duration: 1, delay: 0.4 }}
+                className='relative'
+              >
+                <div
+                  style={{ fontFamily: 'Ms Madi, cursive' }}
+                  className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-rose-500/90 mb-4'
+                >
+                  Yan & Ming
+                </div>
+                {/* Text shadow/glow effect */}
+                <div
+                  style={{ fontFamily: 'Ms Madi, cursive' }}
+                  className='absolute inset-0 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-rose-300/20 blur-sm mb-4 animate-pulse'
+                >
+                  Yan & Ming
+                </div>
+              </motion.div>
               <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif text-gray-800 mb-6 leading-tight'>
                 Our
                 <span className='block bg-gradient-to-r from-rose-500 to-pink-600 bg-clip-text text-transparent'>
