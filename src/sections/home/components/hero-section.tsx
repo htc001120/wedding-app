@@ -1,6 +1,7 @@
 'use client';
 
 import type { WeddingConfigType } from '@/types';
+import { FrameCorner, DecorativeFrame } from '@/components';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
@@ -19,6 +20,15 @@ export const HeroSection = ({
 
   return (
     <div className='h-screen bg-gradient-to-br from-rose-100 via-pink-50 to-purple-100 relative overflow-hidden'>
+      {/* Frame Corners */}
+      <FrameCorner position='top-left' />
+      <FrameCorner position='top-right' />
+      <FrameCorner position='bottom-left' />
+      <FrameCorner position='bottom-right' />
+
+      {/* Decorative Frame Lines */}
+      <DecorativeFrame />
+
       {/* Background Decorations */}
       <div className='absolute inset-0'>
         <div className='absolute -top-40 -right-40 w-80 h-80 bg-rose-200/30 rounded-full blur-3xl'></div>
