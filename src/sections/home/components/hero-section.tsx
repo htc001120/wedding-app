@@ -4,6 +4,7 @@ import type { WeddingConfigType } from '@/types';
 import { FrameCorner, DecorativeFrame } from '@/components';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
+import DateDisplay from './date-display';
 
 interface HeroSectionProps {
   isLoaded: boolean;
@@ -70,12 +71,8 @@ export const HeroSection = ({
                   Yan & Ming
                 </div>
               </motion.div>
-              <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif text-gray-800 mb-6 leading-tight'>
-                Our
-                <span className='block bg-gradient-to-r from-rose-500 to-pink-600 bg-clip-text text-transparent'>
-                  Wedding
-                </span>
-              </h1>
+
+              <DateDisplay />
               <div className='w-32 h-px bg-gradient-to-r from-transparent via-rose-400 to-transparent mx-auto'></div>
             </motion.div>
 
