@@ -174,7 +174,7 @@ export const HeroSection = ({
         </div>
 
         {/* Scroll Indicator */}
-        <div className='flex justify-center pb-6 sm:pb-8'>
+        <div className='flex justify-center pb-12 sm:pb-18'>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: isLoaded ? 1 : 0 }}
