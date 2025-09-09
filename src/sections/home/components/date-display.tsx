@@ -37,16 +37,18 @@ const DateDisplay: React.FC = () => {
   const day = dateObj.getDate();
 
   return (
-    <div className='font-serif text-gray-700 max-w-sm mx-auto p-4'>
-      <div className='text-center text-xs tracking-widest uppercase mb-1'>
+    <div className='text-gray-700 max-w-sm mx-auto p-4'>
+      {/* <div className='text-center text-xs tracking-widest uppercase mb-1'>
         {monthNames[month].slice(0, 3)}
-      </div>
+      </div> */}
       <div className='flex items-center justify-center space-x-2'>
         <div className='flex-grow border-t border-gray-400'></div>
         <div className='text-sm tracking-widest uppercase'>
           {monthNames[month]}
         </div>
-        <div className='text-5xl font-normal leading-none -mt-2'>{day}</div>
+        <div className='font-serif text-5xl font-medium leading-none -mt-2'>
+          {day}
+        </div>
         <div className='text-sm self-start mt-1'>{getOrdinal(day)}</div>
         <div className='text-sm tracking-widest uppercase'>{year}</div>
         <div className='flex-grow border-t border-gray-400'></div>

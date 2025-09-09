@@ -25,6 +25,6 @@ body {
   font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
 }
 
-* {
+*:not([class*='font-']) {
   font-family: var(--font-poppins);
 }
