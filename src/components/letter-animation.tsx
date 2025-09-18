@@ -170,15 +170,15 @@ export const LetterAnimation = ({
                           </span>
                         </p>
                       )}
-                      <h3 className='text-lg sm:text-xl font-serif text-gray-800 mb-2'>
-                        {coupleName}
-                      </h3>
                       <p className='text-sm sm:text-base text-gray-600 mb-4'>
                         {t('letter.invitation-title')}
                       </p>
-                      <div className='text-xs sm:text-sm text-gray-500 font-serif italic'>
+                      <h3 className='text-lg sm:text-xl font-serif text-gray-800 mb-2'>
+                        {coupleName}
+                      </h3>
+                      {/* <div className='text-xs sm:text-sm text-gray-500 font-serif italic'>
                         &ldquo;{t('letter.invitation-quote')}&rdquo;
-                      </div>
+                      </div> */}
                     </div>
                   </motion.div>
                 )}

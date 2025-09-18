@@ -57,11 +57,10 @@ export const FrameCorner = ({ position, className = '' }: FrameCornerProps) => {
 export const DecorativeFrame = ({ className = '' }: DecorativeFrameProps) => {
   return (
     <div className={`absolute inset-0 pointer-events-none ${className}`}>
-      {/* CSS-based lines */}
+      {/* outer lines */}
       <div className='absolute inset-0'>
         {/* Top line */}
         <div
-          id='top-line'
           className='absolute top-[31] left-[88] right-[88] h-0.5 bg-black/100
           sm:top-[40] sm:left-[128] sm:right-[128] 
           md:top-[59] md:left-[174] md:right-[174]'
@@ -86,6 +85,38 @@ export const DecorativeFrame = ({ className = '' }: DecorativeFrameProps) => {
           className='absolute right-[29] top-[87] bottom-[87] w-0.5 bg-black/100 
           sm:right-[40] sm:top-[126] sm:bottom-[126] 
           md:right-[58] md:top-[175] md:bottom-[175]'
+        />
+      </div>
+
+      {/* inner lines */}
+      <div className='absolute inset-0'>
+        {/* Top line */}
+        <div
+          id='top-line'
+          className='absolute top-[40] left-[88] right-[88] h-0.5 bg-black/100
+          sm:top-[47] sm:left-[128] sm:right-[128] 
+          md:top-[67] md:left-[174] md:right-[174]'
+        />
+
+        {/* Bottom line */}
+        <div
+          className='absolute bottom-[40] left-[87] right-[87] h-0.5 bg-black/100 
+          sm:bottom-[47] sm:left-[127] sm:right-[127] 
+          md:bottom-[67] md:left-[175] md:right-[175]'
+        />
+
+        {/* Left line */}
+        <div
+          className='absolute left-[38] top-[87] bottom-[87] w-0.5 bg-black/100 
+          sm:left-[50] sm:top-[126] sm:bottom-[126] 
+          md:left-[66] md:top-[175] md:bottom-[175]'
+        />
+
+        {/* Right line */}
+        <div
+          className='absolute right-[38] top-[87] bottom-[87] w-0.5 bg-black/100 
+          sm:right-[50] sm:top-[126] sm:bottom-[126] 
+          md:right-[66] md:top-[175] md:bottom-[175]'
         />
       </div>
     </div>
