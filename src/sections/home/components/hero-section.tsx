@@ -84,11 +84,11 @@ export const HeroSection = ({
             >
               <div className='relative'>
                 <img
-                  src='/assets/images/church2.png'
+                  src='/assets/images/church3.png'
                   alt='Church'
-                  className='w-full h-auto object-contain filter drop-shadow-lg'
+                  className='w-full h-auto object-contain filter'
                 />
-                <div className='absolute inset-0 bg-gradient-to-t from-white/10 to-transparent mix-blend-overlay'></div>
+                <div className='absolute inset-0 bg-gradient-to-t from-white/10 to-transparent'></div>
               </div>
             </motion.div>
 

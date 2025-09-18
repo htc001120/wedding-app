@@ -40,12 +40,28 @@ export const CoupleIntroduction = ({
             {t('couple.our-story')}
           </h2>
           <div className='w-24 h-px bg-rose-400 mx-auto'></div>
-          <p className='text-base sm:text-lg md:text-xl text-gray-600 mt-6 max-w-2xl mx-auto'>
-            {t('couple.story-text1')}
-          </p>
-          <p className='text-base sm:text-lg md:text-xl text-gray-600 mt-6 max-w-2xl mx-auto'>
-            {t('couple.story-text2')}
-          </p>
+          <div>
+            <ul className='text-base sm:text-lg md:text-xl text-gray-600 mt-6 max-w-2xl mx-auto list-disc list-inside space-y-2 text-left'>
+              <li>
+                <strong>2013:</strong> First met at work in Hong Kong.
+              </li>
+              <li>
+                <strong>2019:</strong> Reunited by fate, and their love story
+                began.
+              </li>
+              <li>
+                <strong>2020:</strong> Moved to London to start a new chapter
+                together.
+              </li>
+              <li>
+                <strong>2023:</strong> Got engaged in London.
+              </li>
+              <li>
+                <strong>2025:</strong> Saying “I do”!
+              </li>
+              <li>And the Adventure Continues…</li>
+            </ul>
+          </div>
         </motion.div>
 
         {/* Couple Cards */}
@@ -73,7 +89,7 @@ export const CoupleIntroduction = ({
             </div>
 
             <h3 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-gray-800 mb-2'>
-              {groom.fullName}
+              {groom.name}
             </h3>
             <p className='text-base sm:text-lg md:text-xl text-blue-600 mb-4 font-medium'>
               {t('couple.the-groom')}
@@ -142,7 +158,7 @@ export const CoupleIntroduction = ({
             </div>
 
             <h3 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-gray-800 mb-2'>
-              {bride.fullName}
+              {bride.name}
             </h3>
             <p className='text-base sm:text-lg md:text-xl text-rose-600 mb-4 font-medium'>
               {t('couple.the-bride')}
@@ -169,9 +185,11 @@ export const CoupleIntroduction = ({
         >
           <div className='bg-white/60 backdrop-blur-sm rounded-2xl p-8 max-w-2xl mx-auto shadow-lg border border-white/40'>
             <p className='text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif text-gray-700 italic mb-4'>
-              {t('couple.love-quote')}
+              {t('couple.love-quote1')}
+              <br />
+              {t('couple.love-quote2')}
             </p>
-            <p className='text-gray-500 text-xs sm:text-sm'>— Clannad</p>
+            {/* <p className='text-gray-500 text-xs sm:text-sm'>— Clannad</p> */}
           </div>
         </motion.div>
       </div>

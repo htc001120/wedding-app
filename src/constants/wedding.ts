@@ -1,7 +1,7 @@
 export const WEDDING_CONFIG = {
   date: new Date('2025-10-16T14:00:00'),
   bride: {
-    name: 'Tracy',
+    name: 'Yan',
     fullName: 'Hiu Yan Lau',
     photo: '/assets/images/DSC_3042_f3.jpg',
   },

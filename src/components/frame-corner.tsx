@@ -61,29 +61,29 @@ export const DecorativeFrame = ({ className = '' }: DecorativeFrameProps) => {
       <div className='absolute inset-0'>
         {/* Top line */}
         <div
-          className='absolute top-[31] left-[88] right-[88] h-0.5 bg-black/100
-          sm:top-[40] sm:left-[128] sm:right-[128] 
+          className='absolute top-[29] left-[88] right-[88] h-0.25 bg-black/100
+          sm:top-[40] sm:left-[128] sm:right-[128] sm:h-0.5
           md:top-[59] md:left-[174] md:right-[174]'
         />
 
         {/* Bottom line */}
         <div
-          className='absolute bottom-[29] left-[87] right-[87] h-0.5 bg-black/100 
-          sm:bottom-[40] sm:left-[127] sm:right-[127] 
+          className='absolute bottom-[29] left-[87] right-[87] h-0.25 bg-black/100 
+          sm:bottom-[40] sm:left-[127] sm:right-[127] sm:h-0.5
           md:bottom-[58] md:left-[175] md:right-[175]'
         />
 
         {/* Left line */}
         <div
-          className='absolute left-[29] top-[87] bottom-[87] w-0.5 bg-black/100 
-          sm:left-[40] sm:top-[126] sm:bottom-[126] 
+          className='absolute left-[29] top-[87] bottom-[87] w-0.25 bg-black/100 
+          sm:left-[40] sm:top-[126] sm:bottom-[126] sm:w-0.5
           md:left-[58] md:top-[175] md:bottom-[175]'
         />
 
         {/* Right line */}
         <div
-          className='absolute right-[29] top-[87] bottom-[87] w-0.5 bg-black/100 
-          sm:right-[40] sm:top-[126] sm:bottom-[126] 
+          className='absolute right-[29] top-[87] bottom-[87] w-0.25 bg-black/100 
+          sm:right-[40] sm:top-[127] sm:bottom-[126] sm:w-0.5
           md:right-[58] md:top-[175] md:bottom-[175]'
         />
       </div>
@@ -93,30 +93,30 @@ export const DecorativeFrame = ({ className = '' }: DecorativeFrameProps) => {
         {/* Top line */}
         <div
           id='top-line'
-          className='absolute top-[40] left-[88] right-[88] h-0.5 bg-black/100
-          sm:top-[47] sm:left-[128] sm:right-[128] 
+          className='absolute top-[33] left-[88] right-[88] h-0.25 bg-black/100
+          sm:top-[46] sm:left-[128] sm:right-[128] sm:h-0.5
           md:top-[67] md:left-[174] md:right-[174]'
         />
 
         {/* Bottom line */}
         <div
-          className='absolute bottom-[40] left-[87] right-[87] h-0.5 bg-black/100 
-          sm:bottom-[47] sm:left-[127] sm:right-[127] 
+          className='absolute bottom-[34] left-[87] right-[87] h-0.25 bg-black/100 
+          sm:bottom-[46] sm:left-[127] sm:right-[127] sm:h-0.5
           md:bottom-[67] md:left-[175] md:right-[175]'
         />
 
         {/* Left line */}
         <div
-          className='absolute left-[38] top-[87] bottom-[87] w-0.5 bg-black/100 
-          sm:left-[50] sm:top-[126] sm:bottom-[126] 
-          md:left-[66] md:top-[175] md:bottom-[175]'
+          className='absolute left-[33] top-[87] bottom-[87] w-0.25 bg-black/100 
+          sm:left-[46] sm:top-[126] sm:bottom-[126] sm:w-0.5
+          md:left-[67] md:top-[175] md:bottom-[175]'
         />
 
         {/* Right line */}
         <div
-          className='absolute right-[38] top-[87] bottom-[87] w-0.5 bg-black/100 
-          sm:right-[50] sm:top-[126] sm:bottom-[126] 
-          md:right-[66] md:top-[175] md:bottom-[175]'
+          className='absolute right-[33] top-[87] bottom-[87] w-0.25 bg-black/100 
+          sm:right-[46] sm:top-[126] sm:bottom-[126] sm:w-0.5
+          md:right-[67] md:top-[175] md:bottom-[175]'
         />
       </div>
     </div>
