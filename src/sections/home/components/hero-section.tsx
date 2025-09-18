@@ -80,7 +80,7 @@ export const HeroSection = ({
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 0.9 }}
               transition={{ duration: 1, delay: 0.8 }}
-              className='relative w-full max-w-[600px] mx-auto mb-8'
+              className='relative w-full max-w-[600px] mx-auto mb-8 p-4 md:p-0'
             >
               <div className='relative'>
                 <img
@@ -97,13 +97,13 @@ export const HeroSection = ({
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 30 }}
               transition={{ duration: 1, delay: 1.2 }}
-              className='flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center'
+              className='flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center'
             >
               <motion.button
                 onClick={() => onScrollToSection('rsvp')}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className='bg-gradient-to-r from-rose-500 to-pink-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base md:text-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer'
+                className='bg-gradient-to-r from-rose-500 to-pink-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base md:text-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer w-auto min-w-[180px]'
               >
                 {t('navigation.rsvp')}
               </motion.button>
@@ -111,7 +111,7 @@ export const HeroSection = ({
                 onClick={() => onScrollToSection('details')}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className='bg-white/80 backdrop-blur-sm text-gray-800 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base md:text-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 cursor-pointer'
+                className='bg-white/80 backdrop-blur-sm text-gray-800 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base md:text-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 cursor-pointer w-auto min-w-[180px]'
               >
                 {t('hero.view-details')}
               </motion.button>
