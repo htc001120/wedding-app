@@ -14,6 +14,8 @@ export const RSVP = () => {
     attendance: '',
     guests: '1',
     dietaryRestrictions: '',
+    hotel: '',
+    drive: '',
     message: '',
   });
 
@@ -37,6 +39,9 @@ export const RSVP = () => {
         body: new URLSearchParams({
           name: formData.name,
           message: formData.message,
+          drive: formData.drive,
+          hotel: formData.hotel,
+          url: window.location.href,
         }).toString(),
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -59,6 +64,8 @@ export const RSVP = () => {
         attendance: '',
         guests: '1',
         dietaryRestrictions: '',
+        hotel: '',
+        drive: '',
         message: '',
       });
     }, 3000);
@@ -238,6 +245,46 @@ export const RSVP = () => {
                     />
                   </div>
                 )} */}
+                {/* Hotel */}
+                <div>
+                  <label
+                    htmlFor='hotel'
+                    className='block text-xs sm:text-sm font-medium text-gray-700 mb-2'
+                  >
+                    Hotel/Accommodation
+                  </label>
+                  <input
+                    type='text'
+                    id='hotel'
+                    name='hotel'
+                    value={formData.hotel}
+                    onChange={handleChange}
+                    className='w-full px-4 py-3 border border-gray-200 text-gray-700 rounded-xl focus:ring-2 focus:ring-rose-400 focus:border-transparent outline-none transition-all duration-300'
+                    placeholder='Which hotel are you staying at?'
+                  />
+                </div>
+
+                {/* Drive */}
+                <div>
+                  <label
+                    htmlFor='drive'
+                    className='block text-xs sm:text-sm font-medium text-gray-700 mb-2'
+                  >
+                    Transportation
+                  </label>
+                  <select
+                    id='drive'
+                    name='drive'
+                    value={formData.drive}
+                    onChange={handleChange}
+                    className='w-full px-4 py-3 border border-gray-200 text-gray-700 rounded-xl focus:ring-2 focus:ring-rose-400 focus:border-transparent outline-none transition-all duration-300'
+                  >
+                    <option value=''>Please select...</option>
+                    <option value='drive'>I will be driving</option>
+                    <option value='not-drive'>I will not be driving</option>
+                  </select>
+                </div>
+
                 {/* Message */}
                 <div>
                   <label
@@ -314,24 +361,6 @@ export const RSVP = () => {
                 </div>
               </div>
               <div className='space-y-4'>
-                {/* Dress Code */}
-                <div className='space-y-1'>
-                  <p className='text-gray-800 text-xs sm:text-sm font-medium'>
-                    {t('faq.questions.dress-code.q')}
-                  </p>
-                  <p className='text-gray-600 text-xs sm:text-sm'>
-                    {t('faq.questions.dress-code.a')}
-                  </p>
-                </div>
-                {/* Transportation */}
-                <div className='space-y-1'>
-                  <p className='text-gray-800 text-xs sm:text-sm font-medium'>
-                    {t('faq.questions.transportation.q')}
-                  </p>
-                  <p className='text-gray-600 text-xs sm:text-sm'>
-                    {t('faq.questions.transportation.a')}
-                  </p>
-                </div>
                 {/* Guest */}
                 <div className='space-y-1'>
                   <p className='text-gray-800 text-xs sm:text-sm font-medium'>
