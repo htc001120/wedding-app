@@ -14,7 +14,6 @@ interface HeroSectionProps {
 
 export const HeroSection = ({
   isLoaded,
-  couple,
   onScrollToSection,
 }: HeroSectionProps) => {
   const { t } = useTranslation('home');
@@ -29,13 +28,6 @@ export const HeroSection = ({
 
       {/* Decorative Frame Lines */}
       <DecorativeFrame />
-
-      {/* Background Decorations */}
-      {/* <div className='absolute inset-0'>
-        <div className='absolute -top-40 -right-40 w-80 h-80 bg-[#F4EADD] rounded-full blur-3xl'></div>
-        <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-[#FFFDF3] rounded-full blur-3xl'></div>
-        <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#FDF4E3] rounded-full blur-3xl'></div>
-      </div> */}
 
       {/* Content */}
       <div className='relative z-10 flex flex-col h-full px-6 pt-10 sm:pt-18 md:pt-20'>
