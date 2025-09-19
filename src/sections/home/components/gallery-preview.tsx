@@ -117,7 +117,7 @@ export const GalleryPreview = () => {
             <button
               onClick={() =>
                 window.open(
-                  'https://photos.google.com/share/kyoto-album-link',
+                  'https://photos.app.goo.gl/P8fZhoBpz4HYvFRF8',
                   '_blank'
                 )
               }
@@ -134,7 +134,7 @@ export const GalleryPreview = () => {
             <button
               onClick={() =>
                 window.open(
-                  'https://photos.google.com/share/leeds-castle-album-link',
+                  'https://photos.app.goo.gl/A7Too6tkraNPTWGW8',
                   '_blank'
                 )
               }
