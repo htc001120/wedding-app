@@ -20,7 +20,7 @@ export const HeroSection = ({
   const { t } = useTranslation('home');
 
   return (
-    <div className='h-screen bg-gradient-to-br from-rose-100 via-pink-50 to-purple-100 relative overflow-hidden'>
+    <div className='h-screen bg-gradient-to-br from-[#F4EADD] via-[#FFFDF3] to-[#FDF4E3] relative overflow-hidden'>
       {/* Frame Corners */}
       <FrameCorner position='top-left' />
       <FrameCorner position='top-right' />
@@ -31,11 +31,11 @@ export const HeroSection = ({
       <DecorativeFrame />
 
       {/* Background Decorations */}
-      <div className='absolute inset-0'>
-        <div className='absolute -top-40 -right-40 w-80 h-80 bg-rose-200/30 rounded-full blur-3xl'></div>
-        <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/30 rounded-full blur-3xl'></div>
-        <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pink-200/20 rounded-full blur-3xl'></div>
-      </div>
+      {/* <div className='absolute inset-0'>
+        <div className='absolute -top-40 -right-40 w-80 h-80 bg-[#F4EADD] rounded-full blur-3xl'></div>
+        <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-[#FFFDF3] rounded-full blur-3xl'></div>
+        <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#FDF4E3] rounded-full blur-3xl'></div>
+      </div> */}
 
       {/* Content */}
       <div className='relative z-10 flex flex-col h-full px-6 pt-10 sm:pt-18 md:pt-20'>
@@ -59,7 +59,7 @@ export const HeroSection = ({
               >
                 <div
                   style={{ fontFamily: 'Ms Madi, cursive' }}
-                  className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-rose-500/90 mb-4'
+                  className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-[#D5A021] mb-4'
                 >
                   Yan & Ming
                 </div>

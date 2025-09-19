@@ -14,11 +14,6 @@ export const EventSchedule = () => {
 
   const scheduleItems = [
     {
-      time: '1:30 PM',
-      event: t('schedule.guest-arrival'),
-      description: '',
-    },
-    {
       time: '2:00 PM',
       event: t('schedule.wedding-ceremony'),
       description: t('schedule.vows'),
@@ -38,7 +33,7 @@ export const EventSchedule = () => {
       time: '6:20 PM',
       event: 'Banquet at Aquagrace',
       description:
-        'Join us for an evening of dining, toasts, and celebration. Please arrive 5–10 minutes early, as the banquet will begin promptly.',
+        'Join us for an evening of dining, toasts, and celebration. Door opens at 6:15pm.',
     },
     {
       time: '8:45 PM',

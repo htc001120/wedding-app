@@ -65,7 +65,7 @@ export const CoupleIntroduction = ({
         </motion.div>
 
         {/* Couple Cards */}
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 relative'>
           {/* Groom Card */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -83,9 +83,6 @@ export const CoupleIntroduction = ({
                   className='rounded-full object-cover'
                 />
               </div>
-              <div className='absolute -bottom-4 -right-4 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-blue-400 rounded-full flex items-center justify-center shadow-lg'>
-                <span className='text-white text-xl sm:text-2xl'>🤴</span>
-              </div>
             </div>
 
             <h3 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-gray-800 mb-2'>
@@ -94,9 +91,9 @@ export const CoupleIntroduction = ({
             <p className='text-base sm:text-lg md:text-xl text-blue-600 mb-4 font-medium'>
               {t('couple.the-groom')}
             </p>
-            <p className='text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed max-w-md mx-auto lg:mx-0 lg:ml-auto'>
+            {/* <p className='text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed max-w-md mx-auto lg:mx-0 lg:ml-auto'>
               {t('couple.groom-description')}
-            </p>
+            </p> */}
 
             {/* Decorative Elements */}
             <div className='mt-6 flex justify-center lg:justify-end space-x-2'>
@@ -107,7 +104,7 @@ export const CoupleIntroduction = ({
           </motion.div>
 
           {/* Heart Divider (Desktop) */}
-          <div className='hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10'>
+          <div className='hidden lg:flex absolute left-1/2 top-60 -translate-x-1/2 -translate-y-1/2 z-10'>
             <motion.div
               initial={{ scale: 0, rotate: -180 }}
               animate={{ scale: inView ? 1 : 0, rotate: inView ? 0 : -180 }}
@@ -152,9 +149,6 @@ export const CoupleIntroduction = ({
                   loading='lazy'
                 />
               </div>
-              <div className='absolute -bottom-4 -left-4 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-rose-400 rounded-full flex items-center justify-center shadow-lg'>
-                <span className='text-white text-xl sm:text-2xl'>👸</span>
-              </div>
             </div>
 
             <h3 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-gray-800 mb-2'>
@@ -163,9 +157,9 @@ export const CoupleIntroduction = ({
             <p className='text-base sm:text-lg md:text-xl text-rose-600 mb-4 font-medium'>
               {t('couple.the-bride')}
             </p>
-            <p className='text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed max-w-md mx-auto lg:mx-0'>
+            {/* <p className='text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed max-w-md mx-auto lg:mx-0'>
               {t('couple.bride-description')}
-            </p>
+            </p> */}
 
             {/* Decorative Elements */}
             <div className='mt-6 flex justify-center lg:justify-start space-x-2'>
@@ -176,11 +170,95 @@ export const CoupleIntroduction = ({
           </motion.div>
         </div>
 
-        {/* Love Quote */}
+        {/* Q&A Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 30 }}
           transition={{ duration: 0.8, delay: 0.6 }}
+          className='mt-16'
+        >
+          <div className='text-center mb-8'>
+            <h3 className='text-2xl sm:text-3xl md:text-4xl font-serif text-gray-800 mb-4'>
+              Little Things About Us
+            </h3>
+            <div className='w-16 h-px bg-rose-400 mx-auto'></div>
+          </div>
+
+          <div className='space-y-6'>
+            {/* Question 1 */}
+            <div className='bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/40'>
+              <h4 className='text-lg sm:text-xl font-semibold text-gray-800 mb-4 text-center'>
+                Favourite Movie
+              </h4>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                <div className='text-center p-4 bg-blue-50 rounded-xl'>
+                  <p className='text-blue-600 font-medium mb-2'>
+                    {groom.name} says:
+                  </p>
+                  <p className='text-gray-700 italic'>"Secret"</p>
+                </div>
+                <div className='text-center p-4 bg-rose-50 rounded-xl'>
+                  <p className='text-rose-600 font-medium mb-2'>
+                    {bride.name} says:
+                  </p>
+                  <p className='text-gray-700 italic'>"Twilight"</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Question 2 */}
+            <div className='bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/40'>
+              <h4 className='text-lg sm:text-xl font-semibold text-gray-800 mb-4 text-center'>
+                Most Memorable Holiday Together
+              </h4>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                <div className='text-center p-4 bg-blue-50 rounded-xl'>
+                  <p className='text-blue-600 font-medium mb-2'>
+                    {groom.name} says:
+                  </p>
+                  <p className='text-gray-700 italic'>
+                    "Chasing the Northern Lights in Norway"
+                  </p>
+                </div>
+                <div className='text-center p-4 bg-rose-50 rounded-xl'>
+                  <p className='text-rose-600 font-medium mb-2'>
+                    {bride.name} says:
+                  </p>
+                  <p className='text-gray-700 italic'>
+                    "Him driving through Norway under polar night"
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Question 3 */}
+            <div className='bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/40'>
+              <h4 className='text-lg sm:text-xl font-semibold text-gray-800 mb-4 text-center'>
+                Hobby I Picked Up from Him/Her
+              </h4>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                <div className='text-center p-4 bg-blue-50 rounded-xl'>
+                  <p className='text-blue-600 font-medium mb-2'>
+                    {groom.name} says:
+                  </p>
+                  <p className='text-gray-700 italic'>"K-Dramas"</p>
+                </div>
+                <div className='text-center p-4 bg-rose-50 rounded-xl'>
+                  <p className='text-rose-600 font-medium mb-2'>
+                    {bride.name} says:
+                  </p>
+                  <p className='text-gray-700 italic'>"Japanese anime"</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Love Quote */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 30 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
           className='text-center mt-16'
         >
           <div className='bg-white/60 backdrop-blur-sm rounded-2xl p-8 max-w-2xl mx-auto shadow-lg border border-white/40'>
