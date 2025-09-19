@@ -93,7 +93,7 @@ export const WeddingDetailsCard = ({
               >
                 <div className='bg-gradient-to-br from-rose-500 to-pink-600 text-white rounded-2xl p-4 sm:p-6 shadow-lg mb-2 h-24 sm:h-28 md:h-32 lg:h-36 flex flex-col items-center justify-center min-w-[100px] sm:min-w-[120px] md:min-w-[140px]'>
                   <div className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-none'>
-                    {date.getDate()}
+                    {date.getUTCDate()}
                   </div>
                 </div>
                 <p className='text-xs sm:text-sm font-medium text-gray-500 uppercase tracking-wider mt-3'>
@@ -114,11 +114,12 @@ export const WeddingDetailsCard = ({
                     {date
                       .toLocaleDateString(currentLang.numberFormat.code, {
                         month: 'short',
+                        timeZone: 'UTC',
                       })
                       .toUpperCase()}
                   </div>
                   <div className='text-sm sm:text-base md:text-lg font-medium opacity-90'>
-                    {date.getFullYear()}
+                    {date.getUTCFullYear()}
                   </div>
                 </div>
                 <p className='text-xs sm:text-sm font-medium text-gray-500 uppercase tracking-wider mt-3'>
@@ -136,7 +137,11 @@ export const WeddingDetailsCard = ({
               >
                 <div className='bg-gradient-to-br from-emerald-500 to-teal-600 text-white rounded-2xl p-4 sm:p-6 shadow-lg mb-2 h-24 sm:h-28 md:h-32 lg:h-36 flex flex-col items-center justify-center min-w-[100px] sm:min-w-[120px] md:min-w-[140px]'>
                   <div className='text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold leading-none'>
-                    {formatWeddingTime(date, currentLang.numberFormat.code)}
+                    {date.toLocaleTimeString(currentLang.numberFormat.code, {
+                      hour: 'numeric',
+                      minute: '2-digit',
+                      timeZone: 'Asia/Tokyo',
+                    })}
                   </div>
                 </div>
                 <p className='text-xs sm:text-sm font-medium text-gray-500 uppercase tracking-wider mt-3'>
@@ -164,6 +169,7 @@ export const WeddingDetailsCard = ({
                     <p className='text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-serif text-gray-800 font-bold text-center leading-tight'>
                       {date.toLocaleDateString(currentLang.numberFormat.code, {
                         weekday: 'long',
+                        timeZone: 'UTC',
                       })}
                     </p>
                     <span className='text-xl sm:text-2xl md:text-3xl'>🗓️</span>
@@ -174,6 +180,7 @@ export const WeddingDetailsCard = ({
                       month: 'long',
                       day: 'numeric',
                       year: 'numeric',
+                      timeZone: 'UTC',
                     })}
                   </p>
                   <p className='text-xs sm:text-sm md:text-base text-rose-600 font-semibold mt-2'>
