@@ -4,7 +4,7 @@
     "dear": "Dear",
     "you-are-invited": "You are invited to our wedding",
     "to": "to",
-    "invitation-title": "We can't wait to share our special day in Okinawawith you",
+    "invitation-title": "We can't wait to share our special day in Okinawa with you",
     "invitation-quote": "You changed my world the moment I met you...",
     "click-to-open-hover": "Click to open the invitation",
     "click-to-open": "Click the envelop to open",
@@ -21,14 +21,6 @@
     "title": "Frequently Asked Questions",
     "help": "Find answers to common questions",
     "questions": {
-      "dress-code": {
-        "q": "What is the dress code?",
-        "a": "Semi-formal attire is requested. Please avoid wearing white as it is reserved for the bride."
-      },
-      "transportation": {
-        "q": "Is transportation provided?",
-        "a": "Shuttle service will be available between the ceremony and reception venues."
-      },
       "guest": {
         "q": "Can I bring guests?",
         "a": "As much as we’d love to celebrate with everyone, space is very limited. We kindly ask for your understanding."
@@ -59,7 +51,7 @@
     "story-text2": "From Hong Kong to London, their journey has been filled with laughter, adventures, and love. After six wonderful years together, they are now ready to begin their next chapter and would be truly honored to have you witness this moment.",
     "the-groom": "The Groom",
     "the-bride": "The Bride",
-    "love-quote1": "Every love story is beautiful",
+    "love-quote1": "Every love story is beautiful,",
     "love-quote2": "but ours is our favourite."
   },
   "details": {
