@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'motion/react';
 import {
   formatWeddingTime,
@@ -21,6 +22,7 @@ export const WeddingDetailsCard = ({
 }: WeddingDetailsCardProps) => {
   const { currentLang } = useTranslate();
   const { t } = useTranslation('home');
+  const [showDressCodeModal, setShowDressCodeModal] = useState(false);
 
   const calendarEvent = {
     title: t('details.our-wedding-day'),
@@ -333,10 +335,14 @@ export const WeddingDetailsCard = ({
               {t('details.please-note')}
             </h4>
             <div className='grid md:grid-cols-3 gap-6 text-xs sm:text-sm text-gray-600'>
-              <div className='flex flex-col items-center'>
+              <div
+                className='flex flex-col items-center cursor-pointer rounded-xl transition-all duration-300'
+                onClick={() => setShowDressCodeModal(true)}
+              >
                 <div className='text-xl sm:text-2xl mb-2'>👗</div>
                 <p className='font-medium'>{t('details.dress-code')}</p>
                 <p>{t('details.formal-attire')}</p>
+                <p className='text-xs text-rose-500 mt-1'>Click for examples</p>
               </div>
               <div className='flex flex-col items-center'>
                 <div className='text-xl sm:text-2xl mb-2'>🚗</div>
@@ -352,6 +358,49 @@ export const WeddingDetailsCard = ({
           </div>
         </motion.div>
       </div>
+
+      {/* Dress Code Modal */}
+      {showDressCodeModal && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className='fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4'
+          onClick={() => setShowDressCodeModal(false)}
+        >
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.9, opacity: 0 }}
+            className='bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] flex flex-col'
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header - Fixed */}
+            <div className='flex justify-between items-center p-6 pb-4 border-b border-gray-100'>
+              <h3 className='text-xl font-semibold text-gray-800'>
+                Dress Code
+              </h3>
+              <button
+                onClick={() => setShowDressCodeModal(false)}
+                className='text-gray-500 hover:text-gray-700 text-xl'
+              >
+                ×
+              </button>
+            </div>
+
+            {/* Scrollable Content */}
+            <div className='flex-1 overflow-y-auto p-6 pt-4'>
+              <div className='text-center'>
+                <img
+                  src='/assets/images/dresscode.jpg'
+                  alt='Dress Code Guidelines'
+                  className='w-full h-auto rounded-xl'
+                />
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
     </div>
   );
 };
