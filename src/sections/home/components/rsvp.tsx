@@ -122,11 +122,12 @@ export const RSVP = () => {
           className='text-center mb-12'
         >
           <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-gray-800 mb-4'>
-            {t('rsvp.title')}
+            Guest Information
           </h2>
           <div className='w-24 h-px bg-rose-400 mx-auto mb-6'></div>
           <p className='text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto'>
-            {t('rsvp.subtitle')}
+            Please share your details with us so we can make your experience
+            perfect!
           </p>
         </motion.div>
 
@@ -139,7 +140,7 @@ export const RSVP = () => {
           >
             <div className='bg-white rounded-3xl p-8 shadow-xl border border-rose-100'>
               <h3 className='text-xl sm:text-2xl md:text-3xl font-serif text-gray-800 mb-6 text-center'>
-                {t('rsvp.message-couple')}
+                Share Your Details
               </h3>
 
               <form onSubmit={handleSubmit} className='space-y-6'>
@@ -309,7 +310,7 @@ export const RSVP = () => {
                   type='submit'
                   className='w-full bg-gradient-to-r from-rose-400 to-pink-500 text-white py-4 px-6 rounded-xl font-medium text-base sm:text-lg hover:from-rose-500 hover:to-pink-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1'
                 >
-                  {t('rsvp.send-rsvp')}
+                  Submit Details
                 </button>
               </form>
             </div>
