@@ -18,6 +18,7 @@ const monthNames = [
 
 function getOrdinal(n: number) {
   if (n > 3 && n < 21) return 'TH';
+
   switch (n % 10) {
     case 1:
       return 'ST';

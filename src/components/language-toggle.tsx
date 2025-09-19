@@ -9,11 +9,6 @@ import { useCallback } from 'react';
 export function LanguageToggle() {
   const { onChangeLang, currentLang } = useTranslate();
 
-  // Hide the language toggle if there's only one language
-  if (!currentLang || languages.length <= 1) {
-    return null;
-  }
-
   const isIndonesian = currentLang?.value === 'id';
 
   const handleChangeLang = useCallback(
@@ -22,6 +17,11 @@ export function LanguageToggle() {
     },
     [onChangeLang]
   );
+
+  // Hide the language toggle if there's only one language
+  if (!currentLang || languages.length <= 1) {
+    return null;
+  }
 
   return (
     <motion.button

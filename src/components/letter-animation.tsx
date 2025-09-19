@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useTranslation } from 'react-i18next';
-import { useSearchParams } from 'next/navigation';
 
 interface LetterAnimationProps {
   onOpen: () => void;
@@ -17,10 +16,8 @@ export const LetterAnimation = ({
   guest,
 }: LetterAnimationProps) => {
   const { t } = useTranslation('home');
-  const searchParams = useSearchParams();
 
   const toName = guest || t('letter.guest');
-  // searchParams.get('to') || searchParams.get('toName') || t('letter.guest');
 
   const [isOpening, setIsOpening] = useState(false);
   const [isHovered, setIsHovered] = useState(false);

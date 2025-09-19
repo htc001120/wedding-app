@@ -195,13 +195,13 @@ export const CoupleIntroduction = ({
                   <p className='text-blue-600 font-medium mb-2'>
                     {groom.name} says:
                   </p>
-                  <p className='text-gray-700 italic'>"Secret"</p>
+                  <p className='text-gray-700 italic'>&quot;Secret&quot;</p>
                 </div>
                 <div className='text-center p-4 bg-rose-50 rounded-xl'>
                   <p className='text-rose-600 font-medium mb-2'>
                     {bride.name} says:
                   </p>
-                  <p className='text-gray-700 italic'>"Twilight"</p>
+                  <p className='text-gray-700 italic'>&quot;Twilight&quot;</p>
                 </div>
               </div>
             </div>
@@ -217,7 +217,7 @@ export const CoupleIntroduction = ({
                     {groom.name} says:
                   </p>
                   <p className='text-gray-700 italic'>
-                    "Chasing the Northern Lights in Norway"
+                    &quot;Chasing the Northern Lights in Norway&quot;
                   </p>
                 </div>
                 <div className='text-center p-4 bg-rose-50 rounded-xl'>
@@ -225,7 +225,7 @@ export const CoupleIntroduction = ({
                     {bride.name} says:
                   </p>
                   <p className='text-gray-700 italic'>
-                    "Him driving through Norway under polar night"
+                    &quot;Him driving through Norway under polar night&quot;
                   </p>
                 </div>
               </div>
@@ -241,13 +241,15 @@ export const CoupleIntroduction = ({
                   <p className='text-blue-600 font-medium mb-2'>
                     {groom.name} says:
                   </p>
-                  <p className='text-gray-700 italic'>"K-Dramas"</p>
+                  <p className='text-gray-700 italic'>&quot;K-Dramas&quot;</p>
                 </div>
                 <div className='text-center p-4 bg-rose-50 rounded-xl'>
                   <p className='text-rose-600 font-medium mb-2'>
                     {bride.name} says:
                   </p>
-                  <p className='text-gray-700 italic'>"Japanese anime"</p>
+                  <p className='text-gray-700 italic'>
+                    &quot;Japanese anime&quot;
+                  </p>
                 </div>
               </div>
             </div>
@@ -267,7 +269,7 @@ export const CoupleIntroduction = ({
               <br />
               {t('couple.love-quote2')}
             </p>
-            {/* <p className='text-gray-500 text-xs sm:text-sm'>— Clannad</p> */}
+            <p className='text-gray-500 text-xs sm:text-sm'>&mdash; Clannad</p>
           </div>
         </motion.div>
       </div>

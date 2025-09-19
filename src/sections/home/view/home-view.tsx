@@ -8,7 +8,6 @@ import {
   CoupleIntroduction,
   WeddingDetailsCard,
   CountdownTimer,
-  VenueInformation,
   EventSchedule,
   RSVP,
   GalleryPreview,

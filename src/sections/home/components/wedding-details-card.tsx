@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import {
-  formatWeddingTime,
   generateGoogleCalendarLink,
   generateMapLink,
 } from '@/lib/wedding-utils';
@@ -343,8 +342,17 @@ export const WeddingDetailsCard = ({
             </h4>
             <div className='grid md:grid-cols-3 gap-6 text-xs sm:text-sm text-gray-600'>
               <div
-                className='flex flex-col items-center cursor-pointer rounded-xl transition-all duration-300'
+                className='flex flex-col items-center cursor-pointer rounded-xl transition-all duration-300 hover:bg-rose-100/50 focus:bg-rose-100/50 focus:outline-none focus:ring-2 focus:ring-rose-300'
                 onClick={() => setShowDressCodeModal(true)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setShowDressCodeModal(true);
+                  }
+                }}
+                role='button'
+                tabIndex={0}
+                aria-label='View dress code examples'
               >
                 <div className='text-xl sm:text-2xl mb-2'>👗</div>
                 <p className='font-medium'>{t('details.dress-code')}</p>

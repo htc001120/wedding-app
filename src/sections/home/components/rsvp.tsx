@@ -31,6 +31,7 @@ export const RSVP = () => {
     // Here you would typically send the data to your backend
 
     setIsSubmitted(true);
+
     const response = await fetch(
       'https://script.google.com/macros/s/AKfycbzLtCKG72kGz1jXFXmN8X6ako9azNPDGT6x0DlMIejmcpOZxBF-HtMIGjbea8Q7MitUJg/exec',
       {
@@ -54,21 +55,8 @@ export const RSVP = () => {
     } else {
       console.error('Form submission failed');
     }
+
     return;
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        attendance: '',
-        guests: '1',
-        dietaryRestrictions: '',
-        hotel: '',
-        drive: '',
-        message: '',
-      });
-    }, 3000);
   };
 
   const handleChange = (
