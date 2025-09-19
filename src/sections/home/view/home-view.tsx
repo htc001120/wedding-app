@@ -104,7 +104,7 @@ export default function HomeView({ guest }: HomeViewProps) {
 
       {/* Venue Information */}
       <section id='venue' className='relative'>
-        <VenueInformation venue={WEDDING_CONFIG.venue} />
+        {/* <VenueInformation venue={WEDDING_CONFIG.venue} /> */}
         <EventSchedule />
       </section>
 

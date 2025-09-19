@@ -19,7 +19,7 @@ export const WEDDING_CONFIG = {
     reception: {
       name: 'Aquagrace Chapel',
       address: 'Aquagrace Chapel, Okinawa, Japan',
-      time: '6:30 PM',
+      time: '6:20 PM',
     },
   },
 };

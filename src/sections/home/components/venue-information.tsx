@@ -150,7 +150,7 @@ export const VenueInformation = ({ venue }: VenueInformationProps) => {
         </div>
 
         {/* Transportation Info */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 30 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -177,7 +177,7 @@ export const VenueInformation = ({ venue }: VenueInformationProps) => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );
