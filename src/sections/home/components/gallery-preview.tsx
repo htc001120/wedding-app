@@ -113,14 +113,41 @@ export const GalleryPreview = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
           className='text-center mt-12'
         >
-          <button className='bg-white text-gray-700 px-8 py-3 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-rose-300 group text-sm sm:text-base'>
-            <span className='flex items-center space-x-2'>
-              <span>{t('gallery.view-full')}</span>
-              <span className='group-hover:translate-x-1 transition-transform duration-300'>
-                📸
+          <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+            <button
+              onClick={() =>
+                window.open(
+                  'https://photos.google.com/share/kyoto-album-link',
+                  '_blank'
+                )
+              }
+              className='bg-white text-gray-700 px-8 py-3 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-rose-300 group text-sm sm:text-base'
+            >
+              <span className='flex items-center space-x-2'>
+                <span>🏯 Kyoto Album</span>
+                <span className='group-hover:translate-x-1 transition-transform duration-300'>
+                  📸
+                </span>
               </span>
-            </span>
-          </button>
+            </button>
+
+            <button
+              onClick={() =>
+                window.open(
+                  'https://photos.google.com/share/leeds-castle-album-link',
+                  '_blank'
+                )
+              }
+              className='bg-white text-gray-700 px-8 py-3 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-rose-300 group text-sm sm:text-base'
+            >
+              <span className='flex items-center space-x-2'>
+                <span>🏰 Leeds Castle Album</span>
+                <span className='group-hover:translate-x-1 transition-transform duration-300'>
+                  📸
+                </span>
+              </span>
+            </button>
+          </div>
         </motion.div>
       </div>
     </div>
