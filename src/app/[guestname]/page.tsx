@@ -2,9 +2,9 @@ import { HomeView } from '@/sections';
 import { notFound } from 'next/navigation';
 
 interface GuestPageParams {
-  params: {
+  params: Promise<{
     guestname: string;
-  };
+  }>;
 }
 
 const guestData: Record<string, string> = {
@@ -42,8 +42,8 @@ const guestData: Record<string, string> = {
   cheche: 'Che Che',
 };
 
-export default function GuestPage({ params }: GuestPageParams) {
-  const { guestname } = params;
+export default async function GuestPage({ params }: GuestPageParams) {
+  const { guestname } = await params;
 
   // You would typically use this guestname to fetch data from a database
   // For this example, we'll use a hardcoded map
